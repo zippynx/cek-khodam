@@ -1,52 +1,45 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cek Khodam — Temukan Entitasmu</title>
-  <meta name="description" content="Masukkan namamu dan temukan khodam yang menemanimu selama ini." />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Masukkan namamu dan temukan khodam yang menemanimu selama ini.">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
-
 <body>
 
-  <!-- ── Toast Notification ───────────────── -->
   <div class="toast" id="toast" role="alert" aria-live="polite">
-    <span class="toast-icon">⚠️</span>
+    <i class="ph ph-warning-circle toast-icon"></i>
     <span id="toastMessage"></span>
   </div>
 
-  <!-- ── Main Content ─────────────────────── -->
   <div class="page-wrapper">
-
-    <!-- Badge -->
     <div class="header-badge">
       <span class="dot"></span>
       Sistem Gaib v1.0
     </div>
 
-    <!-- Card -->
     <div class="card" role="main">
-
-      <!-- Header -->
       <div class="card-header">
-        <div class="icon-circle" aria-hidden="true">☯️</div>
+        <div class="icon-circle" aria-hidden="true">
+          <i class="ph ph-moon-stars"></i>
+        </div>
         <h1 class="card-title">Cek Khodam</h1>
-        <p class="card-subtitle">Masukkan namamu &amp; temukan entitas yang menyertaimu</p>
+        <p class="card-subtitle">Masukkan namamu & temukan entitas yang menyertaimu</p>
       </div>
 
-      <!-- Divider -->
       <div class="divider" aria-hidden="true">
         <div class="divider-line"></div>
-        <span class="divider-icon">✦</span>
+        <i class="ph ph-sparkle divider-icon"></i>
         <div class="divider-line"></div>
       </div>
 
-      <!-- Input -->
       <div class="input-group">
         <label class="input-label" for="nameInput">Nama Kamu</label>
         <div class="input-wrapper">
-          <span class="input-icon" aria-hidden="true">✨</span>
+          <i class="ph ph-user input-icon" aria-hidden="true"></i>
           <input
             type="text"
             id="nameInput"
@@ -55,19 +48,17 @@
             spellcheck="false"
             maxlength="60"
             aria-label="Masukkan nama kamu"
-          />
+          >
         </div>
       </div>
 
-      <!-- CTA Button -->
       <button class="btn-primary" id="btnCek" type="button" aria-label="Mulai cek khodam">
         <span class="btn-text">
-          <span>🔮</span>
+          <i class="ph ph-crystal-ball"></i>
           <span>Ungkap Khodam</span>
         </span>
       </button>
 
-      <!-- Loading State -->
       <div class="loading-state" id="loadingState" aria-live="polite" aria-label="Memuat hasil">
         <div class="spinner-ring">
           <div class="spinner-inner"></div>
@@ -75,7 +66,6 @@
         <p class="loading-text" id="loadingText">Membuka portal mistis…</p>
       </div>
 
-      <!-- Result -->
       <div class="result-container" id="resultContainer" aria-live="polite">
         <div class="result-box">
           <div class="result-label">Khodam Kamu Adalah</div>
@@ -83,20 +73,21 @@
           <div class="result-separator"></div>
           <p class="result-meaning" id="resultMeaning"></p>
         </div>
+        <div class="action-buttons">
+          <button class="btn-secondary" id="btnShare" type="button">
+            <i class="ph ph-share-network"></i> Bagikan Hasil
+          </button>
+          <button class="btn-reset" id="btnReset" type="button" aria-label="Coba nama lain">
+            <i class="ph ph-arrow-counter-clockwise"></i> Coba Nama Lain
+          </button>
+        </div>
       </div>
+    </div>
+  </div>
 
-      <!-- Reset Button -->
-      <button class="btn-reset" id="btnReset" type="button" aria-label="Coba nama lain">
-        ↩ Coba Nama Lain
-      </button>
-
-    </div><!-- /card -->
-  </div><!-- /page-wrapper -->
-
-  <!-- ── Footer ───────────────────────────── -->
   <footer class="footer">
-    <span>© 2024 </span>
-    <a href="#" target="_blank" rel="noopener noreferrer">Fathur</a>
+    <span>© 2026</span>
+    <a href="#" target="_blank" rel="noopener noreferrer">ZippyNx</a>
     <span> · Sistem Pengungkap Entitas Nusantara</span>
   </footer>
 
