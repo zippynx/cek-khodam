@@ -1,81 +1,44 @@
 const khodams = [
   { name: "Harimau Putih",       meaning: "Kamu kuat dan berani seperti harimau, karena pendahulumu mewariskan kekuatan besar padamu." },
   { name: "Macan Kumbang",       meaning: "Kamu misterius dan kuat, seperti macan yang jarang terlihat tapi selalu waspada." },
-  { name: "Harimau Loreng",      meaning: "Kamu tangguh dan memiliki kekuatan untuk melindungi dan menyerang." },
+  { name: "Naga Emas",           meaning: "Kamu berwibawa tinggi, membawa aura kejayaan dan rezeki ke mana pun kamu pergi." },
+  { name: "Garuda Sakti",        meaning: "Kamu adalah sosok pelindung sejati yang punya jiwa kepemimpinan alami." },
   { name: "Singa Bermahkota",    meaning: "Kamu lahir sebagai pemimpin, memiliki kekuatan dan kebijaksanaan seorang raja." },
-  { name: "Gajah Putih",         meaning: "Kamu bijaksana dan memiliki kekuatan besar, lambang dari keberanian dan keteguhan hati." },
-  { name: "Banteng Sakti",       meaning: "Kamu kuat dan penuh semangat, tidak takut menghadapi rintangan." },
-  { name: "Kuda Emas",           meaning: "Kamu berharga dan kuat, siap untuk berlari menuju kesuksesan." },
-  { name: "Elang Biru",          meaning: "Kamu memiliki visi yang tajam dan dapat melihat peluang dari jauh." },
-  { name: "Ular Raksasa",        meaning: "Kamu memiliki kebijaksanaan dan kekuatan tersembunyi, siap menyerang jika diperlukan." },
-  { name: "Ikan Dewa",           meaning: "Kamu tenang dan penuh kedamaian, membawa rezeki dan keberuntungan." },
-  { name: "Rusa Emas",           meaning: "Kamu anggun dan berharga, selalu dihargai oleh orang-orang di sekitarmu." },
-  { name: "Kijang Perak",        meaning: "Kamu cepat dan cekatan, selalu waspada dan siap untuk melompat lebih jauh." },
-  { name: "Lumba-lumba",         meaning: "Kamu pintar dan selalu membawa keceriaan di lautan kehidupan." },
-  { name: "Anjing Pelacak",      meaning: "Kamu setia dan penuh dedikasi, selalu menemukan jalan menuju tujuanmu." },
-  { name: "Kucing Hitam",        meaning: "Kamu misterius dan penuh dengan rahasia, membawa keberuntungan bagi yang memahami." },
-  { name: "Iguana Pink",         meaning: "Kamu eksotis dan selalu menarik perhatian dengan warnamu yang unik." },
-  { name: "Panda Ompong",        meaning: "Kamu menggemaskan dan selalu berhasil membuat orang tersenyum dengan keanehanmu." },
-  { name: "Bebek Karet",         meaning: "Kamu selalu tenang dan ceria, mampu menghadapi gelombang masalah dengan senyum." },
-  { name: "Ninja Turtle",        meaning: "Kamu lincah dan tangguh, siap melindungi yang lemah dengan kekuatan tempurmu." },
-  { name: "Kucing Kulkas",       meaning: "Kamu misterius dan selalu ada di tempat-tempat yang tak terduga." },
-  { name: "Kuda Lumping",        meaning: "Kamu penuh semangat dan selalu tampil beda di setiap kesempatan." },
-  { name: "Kucing Gemuk",        meaning: "Kamu santai dan selalu bikin orang tersenyum dengan kelucuanmu." },
-  { name: "Semut Kecil",         meaning: "Kamu pekerja keras dan selalu bisa diandalkan dalam situasi apa pun." },
-  { name: "Robot Mini",          meaning: "Kamu canggih dan selalu siap membantu dengan kecerdasan teknologi tinggi." },
-  { name: "Ikan Terbang",        meaning: "Kamu unik dan penuh kejutan, selalu melampaui batasan yang ada." },
-  { name: "Lampu Tertidur",      meaning: "Terlihat ngantuk tapi selalu memberikan cahaya yang hangat." },
-  { name: "Sabun Wangi",         meaning: "Kamu selalu membawa keharuman dan kesegaran di mana pun kamu berada." },
-  { name: "Moge Suzuki",         meaning: "Kamu cepat dan penuh gaya, selalu menjadi pusat perhatian di jalanan." },
-  { name: "Cupcake Pelangi",     meaning: "Kamu manis dan penuh warna, selalu membawa kebahagiaan dan keceriaan." },
-  { name: "Indomie Goreng",      meaning: "Selalu bikin kenyang dan bahagia di setiap kesempatan." },
-  { name: "Es Krim Meleleh",     meaning: "Selalu mencairkan suasana dengan rasa manisnya yang tak tertahankan." },
-  { name: "Bakso Ulet",          meaning: "Selalu gigih dan bulat dalam menghadapi masalah." },
-  { name: "Ayam Goreng",         meaning: "Kamu selalu disukai dan dinanti oleh banyak orang, penuh kelezatan dalam setiap langkahmu." },
-  { name: "Kecoa Terbang",       meaning: "Kamu selalu mengagetkan dan bikin heboh seisi ruangan." },
-  { name: "Nasi Padang",         meaning: "Kamu selalu bikin kenyang dan puas dengan kelezatanmu yang khas." },
-  { name: "Rendang Daging",      meaning: "Selalu empuk dan kaya rempah, lambang ketahanan dan kekuatan." },
-  { name: "Sate Ayam",           meaning: "Selalu enak di segala acara, kamu selalu pas di setiap situasi." },
-  { name: "Rawon Sapi",          meaning: "Kamu penuh misteri seperti rawon yang hitam namun nikmat luar biasa." },
-  { name: "Pempek Palembang",    meaning: "Selalu enak dan gurih, kamu dicintai oleh semua kalangan." },
-  { name: "Coto Makassar",       meaning: "Selalu gurih dan nikmat, kamu membawa kekayaan rasa dalam setiap interaksi." },
-  { name: "Wedang Jahe",         meaning: "Selalu hangat dan menenangkan, kamu hadir di saat yang paling dibutuhkan." },
-  { name: "Kopi Susu",           meaning: "Kamu manis dan selalu bikin semangat orang-orang di sekitarmu." },
-  { name: "Teh Botol Sosro",     meaning: "Selalu segar di segala suasana tanpa pernah mengecewakan." },
-  { name: "Jamu Pahit",          meaning: "Selalu memberi kekuatan meski tak enak di awal, manfaatmu terasa belakangan." },
-  { name: "Es Kelapa",           meaning: "Kamu segar dan selalu bikin adem di saat-saat panas." },
-  { name: "Motor Vespa",         meaning: "Selalu klasik dan penuh gaya, tak lekang oleh zaman." },
-  { name: "Honda Supra",         meaning: "Selalu bisa diandalkan di jalanan mana pun dan kapan pun." },
-  { name: "Honda CBR",           meaning: "Selalu cepat dan penuh gaya, kamu lahir untuk memimpin." },
-  { name: "Honda PCX",           meaning: "Selalu mewah dan nyaman, kamu tampil premium di setiap situasi." },
-  { name: "Kompor Meledak",      meaning: "Selalu memberikan kehangatan yang luar biasa, terkadang terlalu bersemangat." },
-  { name: "Kipas Angin Kelereng",meaning: "Selalu memberikan angin segar dengan cara yang kocak dan unik." },
-  { name: "Payung Bocor",        meaning: "Selalu memberikan kejutan saat hujan, kamu penuh dengan twist tak terduga." },
-  { name: "Buku Lucu",           meaning: "Mampu membuatmu tertawa di setiap halaman, kamu adalah hiburan sejati." },
-  { name: "Pensil Penghilang",   meaning: "Selalu menghilang saat dibutuhkan, misterius namun selalu ada saat genting." },
-  { name: "Penghapus Pelawak",   meaning: "Selalu membuat kesalahan menjadi lucu dan pelajaran menjadi ringan." },
-  { name: "Sandal Jepit",        meaning: "Selalu santai dan nyaman, kamu membuat semua orang merasa rileks." },
-  { name: "Rice Cooker",         meaning: "Selalu memasak nasi dengan sempurna, kamu adalah tulang punggung yang diandalkan." },
-  { name: "Kulkas Berisik",      meaning: "Selalu bising tapi berguna, kamu penuh energi dan tak terbendung." },
-  { name: "Rak Buku Pintar",     meaning: "Selalu memberikan buku yang sesuai dengan minatmu, kamu sumber pengetahuan sejati." },
-  { name: "Lampu Tidur",         meaning: "Selalu memberikan cahaya lembut, kamu adalah ketenangan di tengah kegelapan." },
-  { name: "Bantal Guling",       meaning: "Selalu nyaman di pelukan, kamu hadir di saat orang paling butuh kenyamanan." },
-  { name: "Karet Gelang",        meaning: "Selalu fleksibel dan berguna, kamu bisa menyesuaikan diri di segala situasi." },
-  { name: "Sapu Lidi",           meaning: "Kamu kuat dan selalu bisa diandalkan untuk membersihkan masalah." },
-  { name: "Panci Presto",        meaning: "Selalu cepat dan praktis, kamu menyelesaikan masalah dengan efisien." },
-  { name: "Talenan Kayu",        meaning: "Selalu setia menemani dapur, kamu adalah fondasi yang tak tergantikan." },
-  { name: "Cangkir Teh",         meaning: "Selalu menghangatkan suasana dan membuat orang merasa nyaman di dekatmu." },
-  { name: "Cermin Menggigil",    meaning: "Selalu memberikan pantulan yang lucu, kamu tak pernah membuat situasi membosankan." },
-  { name: "Kursi Muter",         meaning: "Memberikan sensasi berputar di setiap duduknya, kamu selalu menghadirkan perspektif baru." },
-  { name: "Tas Pintar",          meaning: "Selalu memberikan apa yang diperlukan saat dibutuhkan, kamu siap sedia." },
-  { name: "Pena Bocor",          meaning: "Selalu meninggalkan jejak, kamu adalah pribadi yang tak mudah dilupakan." },
-  { name: "Toples Kue",          meaning: "Selalu penuh kejutan manis, kamu membawa kebahagiaan bagi orang sekitar." },
-  { name: "Gelang Ajaib",        meaning: "Kamu membawa keberuntungan dan selalu ada di sisi orang yang menyayangimu." },
-  { name: "Lilin Meleleh",       meaning: "Selalu memberikan cahaya di kegelapan meski harus berkorban demi orang lain." },
-  { name: "Kabel Kusut",         meaning: "Selalu membuat penasaran dan bingung, tapi di balik itu tersimpan koneksi yang kuat." }
+  { name: "Burung Phoenix",      meaning: "Berapa kali pun kamu jatuh, kamu selalu bisa bangkit lagi menjadi versi yang lebih kuat." },
+  { name: "Elang Biru",          meaning: "Kamu memiliki visi yang tajam dan selalu bisa melihat peluang emas dari jauh." },
+  { name: "Kapibara Santuy",     meaning: "Masbro sejati. Kamu punya energi damai yang bikin semua orang, bahkan musuh, nyaman di dekatmu." },
+  { name: "Kucing Oren",         meaning: "Kamu penuh energi, bar-bar, susah ditebak, tapi entah kenapa semua orang sayang padamu." },
+  { name: "Bebek Karet",         meaning: "Kamu selalu tenang dan ceria, mampu mengapung santai di atas kerasnya gelombang masalah hidup." },
+  { name: "Panda Ompong",        meaning: "Kamu sangat menggemaskan dan selalu berhasil membuat orang tersenyum hanya dengan kehadiranmu." },
+  { name: "Cicak Nyengir",       meaning: "Kamu pendiam, suka memantau dari atas, dan diam-diam tahu semua rahasia teman-temanmu." },
+  { name: "Nyamuk Kebal",        meaning: "Mental baja! Kamu pantang menyerah meskipun sudah diusir dan ditolak berkali-kali." },
+  { name: "Kucing Kulkas",       meaning: "Sangat misterius, kamu selalu muncul tiba-tiba saat ada makanan nganggur." },
+  { name: "Seblak Ceker",        meaning: "Aura kamu pedas dan membara, kadang bikin sakit perut tapi anehnya selalu ngangenin." },
+  { name: "Nasi Padang",         meaning: "Kamu adalah penyelamat di kala susah, porsi kebaikanmu selalu pas dan memuaskan semua orang." },
+  { name: "Indomie Goreng",      meaning: "Pahlawan akhir bulan. Tidak ada yang bisa menolak pesonamu di saat genting." },
+  { name: "Es Teh Plastik",      meaning: "Kamu sederhana, merakyat, tapi kehadiranmu selalu bisa menyegarkan suasana yang panas." },
+  { name: "Pecel Lele",          meaning: "Kamu setia menemani di malam hari, perpaduan krispi dan pedasmu adalah kunci kebahagiaan." },
+  { name: "Gorengan Anget",      meaning: "Kamu selalu jadi rebutan. Kalau ada kamu, suasana tongkrongan pasti langsung hidup." },
+  { name: "Martabak Manis",      meaning: "Spesialis pembawa kebahagiaan di malam hari, kehadiranmu selalu dinantikan orang rumah." },
+  { name: "Kopi Susu Gula Aren", meaning: "Kamu manis tapi punya sisi pahit yang realistis, selalu bikin semangat orang-orang di sekitarmu." },
+  { name: "Tupperware Emak",     meaning: "Sangat berharga dan sakral. Kalau kamu hilang, dunia bisa kiamat." },
+  { name: "Charger Putus",       meaning: "Meski kondisimu sering lelah dan harus ditekuk-tekuk, kamu tetap sumber energi utama bagi sekitarmu." },
+  { name: "Remote TV",           meaning: "Misterius. Kamu sering menghilang saat dicari-cari, tapi muncul sendiri saat tidak dibutuhkan." },
+  { name: "Gayung Bolong",       meaning: "Meski usahamu kadang bocor di tengah jalan, kamu tidak pernah lelah mencoba menampung harapan." },
+  { name: "Kipas Angin Cosmos",  meaning: "Kamu setia memberikan kesejukan, walaupun kadang cuma bisa geleng-geleng kanan-kiri melihat masalah temanmu." },
+  { name: "Rice Cooker",         meaning: "Kamu adalah tulang punggung keluarga, selalu memberikan kehangatan tanpa banyak bicara." },
+  { name: "Jemuran Terbang",     meaning: "Jiwa kamu bebas! Kamu tidak suka terikat oleh aturan dan sering bikin panik orang rumah." },
+  { name: "Sendok Semen",        meaning: "Kamu kasar di luar tapi sebenarnya sangat kuat membangun fondasi pertemanan." },
+  { name: "Supra Bapak",         meaning: "Legendaris! Kamu irit, tidak banyak gaya, tapi selalu bisa diandalkan untuk menanjak di kerasnya kehidupan." },
+  { name: "Vario Mberr",         meaning: "Aura kamu agresif, suka mencari perhatian di jalanan, tapi diam-diam solid kalau diajak nongkrong." },
+  { name: "Motor Vespa",         meaning: "Selalu klasik dan penuh gaya. Kamu menikmati hidup dengan santai tanpa peduli kecepatan orang lain." },
+  { name: "Wifi Lemot",          meaning: "Kehadiranmu sering kali menguji kesabaran orang lain, tapi mereka tetap tidak bisa lepas darimu." },
+  { name: "Sinyal E (Edge)",     meaning: "Kamu sering tiba-tiba menghilang di saat-saat penting dan muncul lagi saat sudah tidak dibutuhkan." },
+  { name: "Flashdisk Penuh",     meaning: "Isi kepalamu terlalu banyak menyimpan memori masa lalu sampai lupa menyimpan hal baru." }
 ];
 
 const nameInput       = document.getElementById('nameInput');
+const btnClear        = document.getElementById('btnClear');
 const btnCek          = document.getElementById('btnCek');
 const btnReset        = document.getElementById('btnReset');
 const btnShare        = document.getElementById('btnShare');
@@ -83,6 +46,8 @@ const loadingState    = document.getElementById('loadingState');
 const resultContainer = document.getElementById('resultContainer');
 const resultName      = document.getElementById('resultName');
 const resultMeaning   = document.getElementById('resultMeaning');
+const historyContainer= document.getElementById('historyContainer');
+const historyList     = document.getElementById('historyList');
 
 const loadingTexts    = [
   'Membuka portal mistis…',
@@ -91,9 +56,30 @@ const loadingTexts    = [
   'Menyibak tirai semesta…'
 ];
 
-function showToast(message) {
+window.onload = () => {
+  nameInput.focus();
+  renderHistory();
+};
+
+nameInput.addEventListener('input', () => {
+  btnClear.style.display = nameInput.value.length > 0 ? 'block' : 'none';
+});
+
+btnClear.addEventListener('click', () => {
+  nameInput.value = '';
+  btnClear.style.display = 'none';
+  nameInput.focus();
+});
+
+function showToast(message, isSuccess = false) {
   const toast = document.getElementById('toast');
   const toastMsg = document.getElementById('toastMessage');
+  const icon = toast.querySelector('i');
+  
+  icon.className = isSuccess ? 'ph ph-check-circle toast-icon' : 'ph ph-warning-circle toast-icon';
+  icon.style.color = isSuccess ? 'var(--success)' : 'var(--error)';
+  toast.style.borderColor = isSuccess ? 'var(--success)' : 'var(--error)';
+  
   toastMsg.textContent = message;
   toast.classList.add('show');
   setTimeout(() => toast.classList.remove('show'), 3200);
@@ -107,6 +93,50 @@ function generateHash(str) {
     hash = hash & hash;
   }
   return Math.abs(hash);
+}
+
+function saveHistory(name, khodamName) {
+  let history = JSON.parse(localStorage.getItem('khodamHistory')) || [];
+  history = history.filter(item => item.name.toLowerCase() !== name.toLowerCase());
+  history.unshift({ name, khodamName });
+  if (history.length > 5) history.pop();
+  
+  localStorage.setItem('khodamHistory', JSON.stringify(history));
+  renderHistory();
+}
+
+function renderHistory() {
+  const history = JSON.parse(localStorage.getItem('khodamHistory')) || [];
+  if (history.length === 0) {
+    historyContainer.style.display = 'none';
+    return;
+  }
+  
+  historyContainer.style.display = 'block';
+  historyList.innerHTML = '';
+  history.forEach(item => {
+    const li = document.createElement('li');
+    li.className = 'history-item';
+    li.innerHTML = `<span class="h-name">${item.name}</span> <span class="h-khodam">${item.khodamName}</span>`;
+    historyList.appendChild(li);
+  });
+}
+
+function typeWriterEffect(text, element, callback) {
+  element.innerHTML = '<span class="typing-cursor"></span>';
+  let i = 0;
+  const speed = 70;
+  
+  const timer = setInterval(() => {
+    if (i < text.length) {
+      element.innerHTML = text.substring(0, i + 1) + '<span class="typing-cursor"></span>';
+      i++;
+    } else {
+      clearInterval(timer);
+      element.innerHTML = text;
+      if(callback) callback();
+    }
+  }, speed);
 }
 
 function cekKhodam() {
@@ -139,45 +169,81 @@ function cekKhodam() {
     const khodamIndex = hash % khodams.length;
     const khodam = khodams[khodamIndex];
     
-    resultName.textContent = khodam.name;
-    resultMeaning.textContent = khodam.meaning;
-
+    resultMeaning.textContent = ""; 
     resultContainer.classList.add('visible');
-    btnCek.disabled = false;
+    
+    typeWriterEffect(khodam.name, resultName, () => {
+      resultMeaning.textContent = khodam.meaning;
+      saveHistory(name, khodam.name); 
+      btnCek.disabled = false;
+    });
+
   }, 2400);
 }
 
-async function shareResult() {
+async function shareResultImage() {
   const name = nameInput.value.trim();
-  const khodam = resultName.textContent;
-  const shareText = `Ternyata khodam pendamping si ${name} adalah ${khodam}! Cek khodam kamu sekarang.`;
+  const captureBox = document.getElementById('captureBox');
+  const btnShareOriginalText = btnShare.innerHTML;
+  
+  try {
+    btnShare.innerHTML = '<i class="ph ph-spinner-gap ph-spin"></i> Memproses...';
+    btnShare.disabled = true;
 
-  if (navigator.share) {
-    try {
-      await navigator.share({
-        title: 'Cek Khodam Nusantara',
-        text: shareText,
-        url: window.location.href
-      });
-    } catch (err) {
-      console.log('Share canceled');
-    }
-  } else {
-    navigator.clipboard.writeText(shareText);
-    showToast('Hasil disalin ke clipboard!');
+    const canvas = await html2canvas(captureBox, {
+      backgroundColor: '#110e1c', 
+      scale: 2 
+    });
+
+    const link = document.createElement('a');
+    link.download = `Khodam_${name}.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+    
+    showToast('Gambar berhasil disimpan ke perangkat!', true);
+  } catch (error) {
+    showToast('Gagal menyimpan gambar. Coba lagi.');
+    console.error(error);
+  } finally {
+    btnShare.innerHTML = btnShareOriginalText;
+    btnShare.disabled = false;
   }
 }
 
 function resetForm() {
   nameInput.value = '';
+  btnClear.style.display = 'none';
   resultContainer.classList.remove('visible');
   nameInput.focus();
 }
 
 btnCek.addEventListener('click', cekKhodam);
 btnReset.addEventListener('click', resetForm);
-btnShare.addEventListener('click', shareResult);
+btnShare.addEventListener('click', shareResultImage); 
 
 nameInput.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') cekKhodam();
 });
+
+function renderHistory() {
+  const history = JSON.parse(localStorage.getItem('khodamHistory')) || [];
+  if (history.length === 0) {
+    historyContainer.style.display = 'none';
+    return;
+  }
+  
+  historyContainer.style.display = 'block';
+  historyList.innerHTML = '';
+  history.forEach(item => {
+    const li = document.createElement('li');
+    li.className = 'history-item';
+    li.innerHTML = `<span class="h-name">${item.name}</span> <span class="h-khodam">${item.khodamName}</span>`;
+    li.addEventListener('click', () => {
+      nameInput.value = item.name;
+      btnClear.style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      cekKhodam(); 
+    });
+    historyList.appendChild(li);
+  });
+}
